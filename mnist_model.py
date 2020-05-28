@@ -20,8 +20,6 @@ model = Sequential()
 model.add(Dense(units=512, input_shape=(784,), activation='relu'))
 model.add(Dense(units=10, activation='softmax'))
 
-model.summary()
-
 model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 epoch = model.fit(X_train, y_train, epochs=1, validation_data=(X_test , y_test))
