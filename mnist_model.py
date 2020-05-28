@@ -4,6 +4,7 @@ from keras.layers import Dense
 from keras.utils.np_utils import to_categorical
 from keras.optimizers import RMSprop
 from sklearn.metrics import accuracy_score
+import numpy as np
 
 (X_train, y_train) , (X_test, y_test) = mnist.load_data()
 
@@ -30,6 +31,10 @@ accuracy = model.history.history.get('accuracy')
 accuracy=accuracy[-1]*100
 
 print(accuracy)
+
+f = open("accuracy.txt", "w")
+f.write(np.array2string(accuracy))
+f.close()
 
 
 
