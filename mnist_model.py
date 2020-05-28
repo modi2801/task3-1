@@ -17,7 +17,7 @@ y_test = to_categorical(y_test)
 
 model = Sequential()
 
-model.add(Dense(units=512, input_shape=(784,), activation='relu'))
+model.add(Dense(units=100, input_shape=(784,), activation='relu'))
 model.add(Dense(units=10, activation='softmax'))
 
 model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
@@ -29,7 +29,7 @@ model.save('mnist_model_trained.h5')
 accuracy = model.history.history.get('accuracy')
 accuracy=accuracy[-1]*100
 
-print(accuracy)
+print("Accuracy of the model is: "accuracy)
 
 
 
