@@ -32,6 +32,7 @@ model.save('mnist_model_trained.h5')
 
 accuracy = model.history.history.get('accuracy')
 accuracy=accuracy[-1]*100
+accuracy=int(accurcay)
 
 print(accuracy)
 
