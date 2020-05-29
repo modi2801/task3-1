@@ -37,7 +37,7 @@ accuracy=int(accuracy)
 print(accuracy)
 
 f = open("accuracy.txt", "w")
-f.write(np.array2string(accuracy))
+f.write(str(accuracy))
 f.close()
 
 
