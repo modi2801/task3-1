@@ -2,7 +2,7 @@ from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils.np_utils import to_categorical
-from keras.optimizers import RMSprop
+from keras.optimizers import Adam
 from sklearn.metrics import accuracy_score
 import numpy as np
 
@@ -27,7 +27,7 @@ for x in range(i):
     e+=1
 model.add(Dense(units=10, activation='softmax'))
 
-model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
 epoch = model.fit(X_train, y_train, epochs=e, validation_data=(X_test , y_test))
 
 accuracy = model.history.history.get('accuracy')
