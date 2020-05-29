@@ -20,13 +20,15 @@ model = Sequential()
 model.add(Dense(units=10, input_shape=(784,), activation='relu'))
 i=1
 n=50
+e=1
 for i in range(i):
     model.add(Dense(units=n, activation='relu'))
     n+=50
+    e+=1
 model.add(Dense(units=10, activation='softmax'))
 
-model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy']) 
-epoch = model.fit(X_train, y_train, epochs=1, validation_data=(X_test , y_test))
+model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
+epoch = model.fit(X_train, y_train, epochs=e, validation_data=(X_test , y_test))
 
 model.save('mnist_model_trained.h5')
 
