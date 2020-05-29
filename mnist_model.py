@@ -30,8 +30,6 @@ model.add(Dense(units=10, activation='softmax'))
 model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
 epoch = model.fit(X_train, y_train, epochs=e, validation_data=(X_test , y_test))
 
-model.save('mnist_model_trained.h5')
-
 accuracy = model.history.history.get('accuracy')
 accuracy=accuracy[-1]*100
 accuracy=int(accuracy)
