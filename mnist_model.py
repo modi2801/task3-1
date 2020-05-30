@@ -21,7 +21,7 @@ model.add(Dense(units=50, input_shape=(784,), activation='relu'))
 i=1
 n=50
 e=0
-for x in range(i):
+for z in range(i):
     model.add(Dense(units=n, activation='relu'))
     n+=50
     e+=1
