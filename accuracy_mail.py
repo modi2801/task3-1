@@ -3,6 +3,6 @@ with open("/root/task3/accuracy.txt", "r") as f:
 import smtplib as sm
 msg="The model has been successfully created with the desired accuracy!! \nAccuracy of the model is: "+str(acc)+" percentage"
 server=sm.SMTP_SSL("smtp.gmail.com", 465)
-server.login("robertjr.2801@gmail.com",""wczwuwovnebmzrsu"")
+server.login("robertjr.2801@gmail.com","wczwuwovnebmzrsu")
 server.sendmail("robertjr.2801@gmail.com","modifearless@gmail.com", msg)
 server.close()
